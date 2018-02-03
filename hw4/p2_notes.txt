@@ -1,0 +1,13 @@
+Stack
+-72 bytes
+$ebp = 0xffffcc48
+
+Check answer: 0804851c
+Line after check answer strcpy 0x8048543
+strcmp line 0x8048549
+Check answer orginal return addr: 80485aa
+buffer at 0xFFFFCBCC
+return at 0xffffcbfc
+
+8048603:	5d                   	pop    %ebp
+8048604:	c3                   	ret

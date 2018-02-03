@@ -1,0 +1,30 @@
+080483f0 <system@plt>:
+ 80485eb:	e8 00 fe ff ff       	call   80483f0 <system@plt>
+
+ 804858e:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+ 8048595:	e8 76 fe ff ff       	call   8048410 <exit@plt>
+
+ (gdb) x/s 0xffffcfc1
+ 0xffffcfc1:	"/bin/bash"
+
+ 080483d0 <strcpy@plt>:
+  8048536:	e8 95 fe ff ff       	call   80483d0 <strcpy@plt>
+
+  david@yogata:~/Desktop/523s/hw4$ readelf -x 16 ./p2
+
+  Hex dump of section '.rodata':
+    0x08048688 03000000 01000200 6e6f745f 615f6772 ........not_a_gr
+    0x08048698 6561745f 73656372 65740000 456e7465 eat_secret..Ente
+    0x080486a8 72207468 65207365 63726574 20706173 r the secret pas
+    0x080486b8 73207068 72617365 20746f20 6761696e s phrase to gain
+    0x080486c8 20656e74 72792e00 55736167 653a2025  entry..Usage: %
+    0x080486d8 73203c70 68726173 653e0a00 52696768 s <phrase>..Righ
+    0x080486e8 7420616e 73776572 2e205765 6c636f6d t answer. Welcom
+    0x080486f8 65210057 726f6e67 20616e73 7765722e e!.Wrong answer.
+    0x08048708 20476f20 61776179 21006769 76655f6d  Go away!.give_m
+    0x08048718 655f615f 7368656c 6c002f62 696e2f73 e_a_shell./bin/s
+    0x08048728 6800
+
+    [26] .bss              NOBITS          08049904 000904 000004 00  WA  0   0  4
+                                   h.
+string location 08049911
